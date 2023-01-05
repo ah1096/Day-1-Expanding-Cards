@@ -9,12 +9,58 @@ body {
     font-family: Montserrat;
     margin: 0;
     display: flex;
-
     align-items: center;
-        /* centers the column in the middle of page */
     justify-content:center;
     height: 100vh;
     overflow:hidden;
-        /* hides scroll bars */
 }
 
+.container {
+    display: flex;
+        /* immediate children put horizontally in a row */
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+}
+
+@media(max-width: 480px){
+    /* any styles in here will only take effect if the screen is under 480px */
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4), .panel:nth-of-type(5){
+        /* use pseudoselectors to grab only the last two images */
+        display: none;
+    }
+
+}
