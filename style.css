@@ -23,6 +23,28 @@ body {
     color: teal;
 }
 
+a:link {
+    text-decoration: none;
+    color: goldenrod
+}
+
+a:visited {
+    text-decoration: none;
+    color: grey;
+}
+
+a:hover {
+    text-decoration: none;
+    color: teal;
+}
+
+a:active {
+    text-decoration: none;
+    color: teal;
+}
+
+
+
 .container {
     display: flex;
         /* immediate children put horizontally in a row */
